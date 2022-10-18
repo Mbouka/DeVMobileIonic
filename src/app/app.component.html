@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-split-pane contentId="maincontent">
+    <ion-menu contentId="maincontent" menuId="maincontent" type="overlay" >
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-menu-toggle autoHide="false">
+          <span style="color:blue ;margin-left: 15px;"><small> Navigation par Menu gauche</small></span>
+          <ion-item [routerLink]="['accueil']">
+            
+            <ion-label>Accueil</ion-label>
+          </ion-item>
+          <ion-item [routerLink]="['preference']">
+            <ion-label>Préférence</ion-label>
+          </ion-item>
+          <ion-item [routerLink]="['profil']">
+            <ion-label>Profil</ion-label>
+          </ion-item>
+          <ion-item [routerLink]="['propos']">
+            <ion-label>A propos</ion-label>
+          </ion-item>
+          <span style="color:blue ;margin-left: 15px;"><small> Navigation par onglet</small> </span>
+          <ion-item [routerLink]="['navigation']">
+            <ion-label>Navigation</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="maincontent"></ion-router-outlet>
+
+  </ion-split-pane>
+</ion-app>

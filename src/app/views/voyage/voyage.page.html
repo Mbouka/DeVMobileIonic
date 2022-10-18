@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-title id="titles" mode="ios">voyage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title><small>Choisir une Destination</small></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of lieux">
+          <a [routerLink]="['/details',item.ville]">click</a>
+         
+          <ion-label>
+            {{item.nom}}
+            <h5 ><small>{{item.ville}}, {{item.pays}}</small></h5>
+            <!--<ion-button id="pat-button" mode="ios"  (click)="openVoyage()"><ion-icon name="Add"></ion-icon>Ajouter</ion-button>-->
+            <ion-button id="pat-button" mode="ios"  (click)="add(item.nom,item.pays)"><ion-icon name=""></ion-icon>voir</ion-button>
+
+          </ion-label>
+          <ion-avatar slot="start">
+            <img src="{{item.image}}" alt="">
+           </ion-avatar>
+        </ion-item>
+       <ion-item [routerLink]="['details']">
+          
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

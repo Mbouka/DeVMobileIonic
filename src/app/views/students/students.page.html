@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar  mode="ios">
+    <ion-title id="titles" mode="ios">students</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header >
+    <ion-card-title>Liste des Etudiants</ion-card-title>
+  </ion-card-header>
+</ion-card>
+<ion-card>
+<ion-list>
+  <ion-item *ngFor="let item of persone">
+    <ion-label> <h4> {{item.nom}}</h4>
+      <h4> <small> {{item.filiere}}, {{item.anneeAca}}</small></h4>
+     
+    </ion-label>
+    <ion-avatar slot="end">
+      <img src="{{item.image}}" alt="">
+     </ion-avatar>
+  </ion-item>
+</ion-list>
+</ion-card> 
+</ion-content>
